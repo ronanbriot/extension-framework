@@ -3,25 +3,20 @@
     "description": "UVDesk Community Helpdesk Extension Framework Bundle",
     "type": "symfony-bundle",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "akshay kumar",
-            "email": "akshay.kumar758@webkul.com"
-        }
-    ],
+    "authors": [{
+        "name": "akshay kumar",
+        "email": "akshay.kumar758@webkul.com"
+    }],
     "require": {
-        "php": "^7.2 || ^8.0",
-        "uvdesk/composer-plugin": "@dev",
-        "uvdesk/core-framework": "@dev"
+        "php": "^7.3 || ^8.0",
+        "uvdesk/composer-plugin": "^1.0",
+        "uvdesk/core-framework": "^1.0.3"
     },
     "autoload": {
         "psr-4": { "Webkul\\UVDesk\\ExtensionFrameworkBundle\\": "" }
     },
     "extra": {
-        "uvdesk-package-extension": "Webkul\\UVDesk\\ExtensionFrameworkBundle\\Package\\Composer",
-        "branch-alias": {
-            "dev-master": "1.0.x-dev"
-        }
+        "uvdesk-package-extension": "Webkul\\UVDesk\\ExtensionFrameworkBundle\\Package\\Composer"
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
