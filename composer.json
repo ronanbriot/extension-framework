@@ -1,5 +1,5 @@
 {
-    "name": "uvdesk/extension-framework",
+    "name": "ronanbriot/extension-framework",
     "description": "UVDesk Community Helpdesk Extension Framework Bundle",
     "type": "symfony-bundle",
     "license": "MIT",
