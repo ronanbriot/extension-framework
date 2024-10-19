@@ -4,6 +4,7 @@ namespace Webkul\UVDesk\ExtensionFrameworkBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Webkul\UVDesk\ExtensionFrameworkBundle\DependencyInjection\ContainerExtension;
 use Webkul\UVDesk\ExtensionFrameworkBundle\DependencyInjection\Passes\RoutingPass;
 use Webkul\UVDesk\ExtensionFrameworkBundle\DependencyInjection\Passes\ConfigurationPass;
@@ -11,7 +12,13 @@ use Webkul\UVDesk\ExtensionFrameworkBundle\DependencyInjection\Passes\PackageCon
 
 class UVDeskExtensionFrameworkBundle extends Bundle
 {
-    public function getContainerExtension()
+    /**
+     * Returns the bundle's container extension.
+     *
+     * @return ExtensionInterface|null
+     *
+     */
+    public function getContainerExtension(): ?ExtensionInterface
     {
         return new ContainerExtension();
     }

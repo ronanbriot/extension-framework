@@ -4,6 +4,7 @@ namespace Webkul\UVDesk\ExtensionFrameworkBundle\DependencyInjection;
 
 use Symfony\Component\Yaml\Yaml;
 use Symfony\Component\Config\FileLocator;
+use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -22,12 +23,22 @@ use Webkul\UVDesk\ExtensionFrameworkBundle\Definition\Package\ContainerBuilderAw
 
 class ContainerExtension extends Extension
 {
-    public function getAlias()
+    /**
+     *
+     * @return string
+     *
+     */
+    public function getAlias(): string
     {
         return 'uvdesk_extensions';
     }
 
-    public function getConfiguration(array $configs, ContainerBuilder $container)
+    /**
+     * Returns extension configuration.
+     *
+     * @return ConfigurationInterface|null
+     */
+    public function getConfiguration(array $configs, ContainerBuilder $container): ?ConfigurationInterface
     {
         return new Configuration();
     }

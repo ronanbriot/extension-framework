@@ -57,7 +57,13 @@ class RouteLoader extends Loader implements RouterInterface
         }
     }
     
-    public function load($resource, $type = null)
+    /**
+     * Loads a resource.
+     *
+     * @return mixed
+     *
+     */
+    public function load($resource, $type = null): mixed
     {
         $routeCollection = new RouteCollection();
 
@@ -90,7 +96,14 @@ class RouteLoader extends Loader implements RouterInterface
         return $routeCollection;
     }
 
-    public function supports($resource, $type = null)
+    /**
+     * Returns whether this class supports the given resource.
+     *
+     * @param mixed $resource A resource
+     *
+     * @return bool
+     */
+    public function supports($resource, $type = null): bool
     {
         return 'uvdesk_extensions' === $type;
     }
