@@ -12,12 +12,15 @@ use Webkul\UVDesk\ExtensionFrameworkBundle\Definition\MappingResource;
 
 class Kernel
 {
-    private $isTwigConfigured = false;
+    private $isTwigConfigured;
+    private $container;
+    private $mappingResource;
 
     public function __construct(ContainerInterface $container, MappingResource $mappingResource)
     {
         $this->container = $container;
         $this->mappingResource = $mappingResource;
+        $this->isTwigConfigured = false;
     }
 
     public function onKernelRequest(RequestEvent $event)

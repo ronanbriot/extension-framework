@@ -15,7 +15,7 @@ class UVDeskExtensionFrameworkBundle extends Bundle
     /**
      * Returns the bundle's container extension.
      *
-     * @return ExtensionInterface|null
+     * @return ExtensionInterface
      *
      */
     public function getContainerExtension(): ?ExtensionInterface

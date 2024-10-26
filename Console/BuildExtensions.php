@@ -13,6 +13,8 @@ use Webkul\UVDesk\ExtensionFrameworkBundle\Definition\Package\ConfigurablePackag
 
 class BuildExtensions extends Command
 {
+    private $container;
+
     public function __construct(ContainerInterface $container)
     {
         $this->container = $container;
