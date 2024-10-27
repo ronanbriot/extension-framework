@@ -15,6 +15,7 @@ class Console
 {
     private $kernel;
     private $container;
+    private $mappingResource;
 
     public function __construct(ContainerInterface $container, KernelInterface $kernel, MappingResource $mappingResource)
     {
